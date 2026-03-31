@@ -1,39 +1,21 @@
 /* GLOBAL */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: #0f172a;
+  color: white;
 }
 
-/* MAIN CONTAINER */
-.container {
-  display: flex;
-  min-height: 100vh;
-  padding: 40px;
-  gap: 30px;
-}
-
-/* LEFT & RIGHT COLUMNS */
-.left, .right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* NAME CENTERED */
+/* NAME HEADER */
 .header {
-  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  padding: 30px 0;
 }
 
 .header h1 {
-  color: white;
-  font-size: 36px;
   margin: 0;
-  transition: 0.3s ease;
+  font-size: 36px;
+  transition: 0.3s;
 }
 
 .header h1:hover {
@@ -41,46 +23,55 @@ body {
   transform: scale(1.05);
 }
 
-/* SECTION CARDS */
-.section {
-  background: #e0f2fe; /* light blue */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: 0.25s ease;
+/* 2-COLUMN LAYOUT */
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
 }
 
-/* HOVER EFFECT ON CARDS */
+/* LEFT & RIGHT */
+.left,
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* SECTION CARDS */
+.section {
+  background: #e0f2fe;
+  color: #0f172a; /* dark text inside cards */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
 .section:hover {
   transform: translateY(-5px);
   background: #bae6fd;
 }
 
-/* SECTION TITLES */
-h2 {
+/* TITLES */
+.section h2 {
   margin-top: 0;
-  border-bottom: 2px solid #7dd3fc;
+  border-bottom: 2px solid #38bdf8;
   padding-bottom: 5px;
 }
 
 /* ITEMS */
 .item {
-  margin-bottom: 15px;
   padding: 10px;
   border-radius: 8px;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
-/* ITEM HOVER */
 .item:hover {
   background: #7dd3fc;
   transform: translateX(5px);
-}
-
-/* COMPANY TEXT */
-.company {
-  font-style: italic;
-  color: #334155;
 }
 
 /* LISTS */
@@ -90,7 +81,6 @@ ul {
 
 li {
   margin-bottom: 5px;
-  transition: 0.2s;
 }
 
 li:hover {
@@ -113,7 +103,8 @@ a:hover {
     flex-direction: column;
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 100%;
   }
 }
