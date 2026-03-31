@@ -1,78 +1,86 @@
-/* RESET */
+/* GLOBAL */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
-  color: #222;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #0f172a;
 }
 
-/* LAYOUT */
+/* MAIN CONTAINER */
 .container {
   display: flex;
   min-height: 100vh;
-}
-
-/* LEFT SIDE (PROFILE) */
-.left {
-  width: 35%;
-  background: #0f172a; /* dark blue */
-  color: white;
   padding: 40px;
+  gap: 30px;
 }
 
-/* RIGHT SIDE (CONTENT) */
-.right {
-  width: 65%;
-  padding: 40px;
-  background: white;
+/* LEFT & RIGHT COLUMNS */
+.left, .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* NAME */
-h1 {
-  margin-bottom: 10px;
-  font-size: 28px;
-  transition: color 0.3s ease;
-}
-
-h1:hover {
-  color: #38bdf8; /* light blue hover */
-}
-
-/* TITLE */
-.title {
-  color: #94a3b8;
-  margin-bottom: 30px;
-}
-
-/* SECTIONS */
-.section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 18px;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
-/* ITEMS (experience, education, etc.) */
-.item {
+/* NAME CENTERED */
+.header {
+  width: 100%;
+  text-align: center;
   margin-bottom: 20px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+.header h1:hover {
+  color: #38bdf8;
+  transform: scale(1.05);
+}
+
+/* SECTION CARDS */
+.section {
+  background: #e0f2fe; /* light blue */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+/* HOVER EFFECT ON CARDS */
+.section:hover {
+  transform: translateY(-5px);
+  background: #bae6fd;
+}
+
+/* SECTION TITLES */
+h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #7dd3fc;
+  padding-bottom: 5px;
+}
+
+/* ITEMS */
+.item {
+  margin-bottom: 15px;
   padding: 10px;
   border-radius: 8px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
+/* ITEM HOVER */
 .item:hover {
-  background: #f1f5f9;
+  background: #7dd3fc;
   transform: translateX(5px);
 }
 
 /* COMPANY TEXT */
 .company {
   font-style: italic;
-  color: #64748b;
+  color: #334155;
 }
 
 /* LISTS */
@@ -82,16 +90,16 @@ ul {
 
 li {
   margin-bottom: 5px;
-  transition: color 0.2s;
+  transition: 0.2s;
 }
 
 li:hover {
-  color: #38bdf8;
+  color: #0284c7;
 }
 
 /* LINKS */
 a {
-  color: #38bdf8;
+  color: #0369a1;
   text-decoration: none;
 }
 
@@ -100,7 +108,7 @@ a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
   }
