@@ -1,3 +1,111 @@
+/* RESET */
 body {
-  background-color: red !important;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT SIDE (PROFILE) */
+.left {
+  width: 35%;
+  background: #0f172a; /* dark blue */
+  color: white;
+  padding: 40px;
+}
+
+/* RIGHT SIDE (CONTENT) */
+.right {
+  width: 65%;
+  padding: 40px;
+  background: white;
+}
+
+/* NAME */
+h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #38bdf8; /* light blue hover */
+}
+
+/* TITLE */
+.title {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 18px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* ITEMS (experience, education, etc.) */
+.item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+/* COMPANY TEXT */
+.company {
+  font-style: italic;
+  color: #64748b;
+}
+
+/* LISTS */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+  transition: color 0.2s;
+}
+
+li:hover {
+  color: #38bdf8;
+}
+
+/* LINKS */
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
 }
